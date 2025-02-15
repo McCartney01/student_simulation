@@ -1,0 +1,72 @@
+[
+    {
+        "problem_id": "1303513896862699520",
+        "question": "The letter 'H' can be displayed as shown. Write a program to output 'H'.\n\n```\n*   *\n*   *\n*****\n*   *\n*   *\n```\n\n### Input Format:\n\nNone\n\n### Output Format:\n\nOutput the letter 'H' pattern.\n\n### Sample Input:\n\nHere is a set of input. For example:\n\n```in\n\n```\n\n### Sample Output:\n\nHere is the corresponding output. For example:\n\n```out\n*   *\n*   *\n*****\n*   *\n*   *\n```",
+        "desc": "This problem tests the understanding of the `print()` function in Python to format and output text as a specific pattern. It requires basic knowledge of string literals and handling newlines to achieve the desired output format. The task assesses a student's ability to use simple print statements to recreate a specified textual pattern.",
+        "program": "void WriteLetter(FILE *f, int n){\n\tconst char a[27]={\"ABCDEFGHIJKLMNOPQRSTUVWXYZ\"};\n\tfor(int i=0;i<n;i++){\n\t\tfputc(a[i],f);\n\t}\n\tfclose(f);\n}",
+        "error_desc": "1. The code is written in C instead of Python, which is required by the problem.\n2. The submitted function doesn't solve the task of printing the letter 'H'.\n3. The code handles file operations, which are unrelated to the problem requirements."
+    },
+    {
+        "problem_id": "1233719610445049856",
+        "question": "Definition: The combination of the uppercase initials of each word in a phrase is called the abbreviation of that phrase. For instance, WHO is the abbreviation of World Health Organization.\n\n### Input Format:\n\nThe test data consists of one line, containing a phrase composed of one or more words; each phrase contains no more than 10 words, and each word is composed of one or more uppercase or lowercase letters; the length of each word does not exceed 10. The words are separated by one or more spaces.\n\n### Output Format:\n\nOutput the specified abbreviation.\n\n### Input Example:\n\n```in\nWorld Health Organization\n```\n\n### Output Example:\n\n```out\nWHO\n```",
+        "desc": "This problem primarily tests the student's understanding and manipulation of strings in Python. It involves string splitting, iteration, and concatenation to form the abbreviation by extracting the uppercase initials from each word. It assesses the student's ability to handle input with variations in spacing and combine basic string operations to achieve the desired output.",
+        "program": "input = \"Self contained underwater breathing apparatus\"\noutput = \"\"\nfor i in input.upper().split():\n    output += i[0]",
+        "error_desc": "1. The program doesn't read input from the standard input.\n2. The program doesn't output the result."
+    },
+    {
+        "problem_id": "1309698180112834560",
+        "question": "Input a non-negative integer, and determine the number of 1s in its binary representation (Hint: use the bin function).\n\n### Input Format:\n\nInput a positive integer.\n\n### Output Format:\n\nOutput the number of 1s.\n\n### Sample Input 1:\n\nHere is an example of input:\n\n```in\n37\n```\n\n### Sample Output 1:\n\nHere is the corresponding output:\n\n```out\n3\n```\n\n### Sample Input 2:\n\nHere is an example of input:\n\n```in\n0\n```\n\n### Sample Output 2:\n\nHere is the corresponding output:\n\n```out\n0\n```",
+        "desc": "The problem examines the understanding of Python's string manipulation, particularly using the `bin` function to convert numbers to their binary representation. It assesses the ability to work with strings and count specific characters, specifically counting '1's in the binary form of a number. This requires basic skills in conversion between number systems and string processing in Python.",
+        "program": "num = bin(int(input()))\nprint(str(num).count('1'))",
+        "error_desc": "No error."
+    },
+    {
+        "problem_id": "1368392480369938432",
+        "question": "Enter an arbitrary three-digit integer (which can be positive or negative), and use built-in numerical operators to output the units, tens, and hundreds digits of the number.\n\n### Input format:\n\nEnter an integer A.\n\n### Output format:\n\nOutput the units, tens, and hundreds digits separately.\n\n### Sample input:\n\nA set of inputs is provided here. For example:\n\n```in\n-123\n```\n\n### Sample output:\n\nThe corresponding output is given here. For example:\n\n```out\n3 2 1\n```",
+        "desc": "This question tests the understanding of Python's numerical types and basic arithmetic operators. Students must demonstrate proficiency in handling integer arithmetic and extracting specific digits by using modulo and integer division operations. The problem requires attention to details when handling both positive and negative integers, ensuring correct digit extraction.",
+        "program": "a=int(input(\"\"))\n\na=abs(a)\n\nx=a//100\n\ny=(a//10)%10\n\nz=a%10\n\nprint(\"{} {} {}\".format(z,y,x))",
+        "error_desc": "No error."
+    },
+    {
+        "problem_id": "1310408013900275712",
+        "question": "Input 3 distinct integers, which correspond to the ASCII values of 3 letters. Output these 3 letters in ascending order based on their ASCII values.\n\n### Input Format:\n\nInput consists of 3 integers in one line, separated by spaces.\n\n### Output Format:\n\nOutput the 3 letters in ascending order of their ASCII values, connected by \"<\".\n\n### Sample Input:\n\nHere is a sample input. For example:\n\n```in\n97 65 100\n```\n\n### Sample Output:\n\nHere is the corresponding output. For example:\n\n```out\nA<a<d\n```",
+        "desc": "The question tests understanding of strings and ASCII values in Python. It requires using the `chr()` function to convert integers to characters and the `sorted()` function to order them by their ASCII values. The exercise evaluates the ability to manipulate strings and lists and to perform basic input/output operations.",
+        "program": "numlist=sorted(list(map(eval,input().split())))\nprint(\"{:c}<{:c}<{:c}\".format(numlist[0],numlist[1],numlist[2]))",
+        "error_desc": "No error."
+    },
+    {
+        "problem_id": "1191599518237634560",
+        "question": "Input a string and output the last character.\n\n### Input format:\n\nInput 1 string\n\n### Output format:\n\nThe last character\n\n### Input example:\n\n```in\n12345678\n```\n\n### Output example:\n\n```out\n8\n```",
+        "desc": "This question tests the ability to manipulate strings in Python, specifically accessing elements by index. It requires understanding zero-based indexing to retrieve the last character of the string, which can be achieved using negative indexing or calculating the length of the string. The problem is straightforward, focusing on basic string operations and ensuring correct comprehension of indexing concepts.",
+        "program": "print(input()[-1])",
+        "error_desc": "No error."
+    },
+    {
+        "problem_id": "1063270394656088064",
+        "question": "Input a numeric value representing the radius of a circle, and calculate the area of the corresponding circle. Use the pi constant from the math library for the value of π.\n\n### Input Format:\n\nEnter numerical data, for example: 1.5\n\n### Output Format:\n\nOutput the area of the circle, with two decimal places, for example: 7.07\n\n### Sample Input:\n\nHere is a set of input. For example:\n\n```in\n1.5\n```\n\n### Sample Output:\n\nHere is the corresponding output. For example:\n\n```out\n7.07\n```",
+        "desc": "The problem assesses the fundamental understanding of Python's `print()` function, formatting outputs, and using external libraries such as `math` for mathematical constants. The task requires students to calculate a geometric property using basic arithmetic operations and format the result to a specified decimal precision. It evaluates students' abilities in handling numerical input/output and employing library functions to solve problems.",
+        "program": "r=int(input('输入半径值：'))\narea=3.1415*r*r\nprint(area)\n\nprint('{:.2f}'.format(area))```",
+        "error_desc": "1. The student used `int()` to convert input, but the input can be a float.\n    2. Using `int()` on a float input like `'1.5'` causes a `ValueError`."
+    },
+    {
+        "problem_id": "1346752984939581440",
+        "question": "The \"Count Seven\" game is a common drinking game played by multiple people sitting in a circle. One person starts by calling out a number, and the subsequent people continue by incrementing the number by 1. When a number contains the digit 7 or is a multiple of 7, the person must say \"pass\". Given two positive integers m and n (1<=m<=n), count the number of times \"pass\" would be called for the numbers in the range [m-n].\n\n### Input format:\n\nInput two positive integers m and n (1<=m<=n), separated by a comma.\n\n### Output format:\n\nOutput the number of times \"pass\" would be called for the numbers in the range [m-n]. If there are none, output None.\n\n### Sample Input 1:\n\n```in\n10,21\n```\n\n### Sample Output 1:\n```out\n3\n```\n### Sample Input 2:\n\n```in\n10,13\n```\n\n### Sample Output 2:\n```out\nNone\n```",
+        "desc": "The problem involves understanding the manipulation and iteration over sequences, with specific attention to numerical properties. Students need to demonstrate knowledge of string and list operations to check for the presence of the digit '7' and divisibility by 7 in a series of numbers. It tests students' ability in conditional logic, loops, and basic input/output handling in Python.",
+        "program": "s=input().split(\",\")\nm=eval(s[0])\nn=eval(s[1])\nt=0\nflag=1\nif flag==1:\n    for i in range(1,n-m+1):\n        if (m+i)%7==0 or \"7\" in str(m+i):\n            t=t+1\n        else:\n            flag==0\nif flag==1 and t!=0:\n    print(t)\nelse:\n    print(\"None\")",
+        "error_desc": "No error."
+    },
+    {
+        "problem_id": "1270663628003131392",
+        "question": "Given an integer n, print n `*` characters in one line.\n\n### Input Format:\n\nInput an integer n.\n\n### Output Format:\n\nOutput n `*` characters.\n\n### Input Example:\n\nHere is an example of input:\n\n```in\n3\n```\n\n### Output Example:\n\nHere is the corresponding output:\n\n```out\n***\n```",
+        "desc": "The question tests basic Python syntax including the use of `print()` and `input()` functions, and basic string manipulation. It evaluates a student's ability to take user input, process this input as an integer, and generate a string output based on the input. The problem primarily requires understanding of converting input to the appropriate type and utilizing the string repetition feature.",
+        "program": "print('*'*int(input('n=')))",
+        "error_desc": "1. The student's code uses a prompt string `'n='` in the `input` function, which is not required by the problem's input specification.\n2. This results in additional characters being output, violating the problem's output format."
+    },
+    {
+        "problem_id": "1346723217850834944",
+        "question": "Input a positive integer n (n>=5 and odd), output an n×n grid.\n\n### Input Format:\n\nA positive integer n (n>=5 and odd)\n\n### Output Format:\n\nOutput an n×n grid\n\n### Sample Input:\n\n```in\n9\n```\n\n### Sample Output:\n\nProvide the corresponding output here. For example:\n\n```out\n*********\n*   *   *\n*   *   *\n*   *   *\n*********\n*   *   *\n*   *   *\n*   *   *\n*********\n```",
+        "desc": "The problem tests basic Python syntax skills, particularly the use of the `print()` function and string manipulation for constructing and displaying text-based patterns. It requires understanding of nested loops to generate a grid structure, demonstrating the ability to iterate and conditionally format strings. The task also assesses a student's capability to follow input constraints and translate them into programmatically defined patterns.",
+        "program": "TempStr=input('')\nif TempStr[-1] in ['F','f']:\n    C=(eval(TempStr[:-1])-32)/1.8\n    print(\"{:.2f}C\".format(C))\nelif TempStr[-1] in ['C','c']:\n    F=1.8*eval(TempStr[:-1])+32\n    print(\"{:.2f}F\".format(F))\nelse :\n    print(\"Error\")",
+        "error_desc": "1. The student's code is for temperature conversion, not for creating an n×n grid as required by the problem.\n2. The student's code expects an input string with a temperature unit, but the problem gives an integer input, causing logic failure.\n3. If the input is invalid, an IndexError may occur, leading to a non-zero exit code."
+    }
+]

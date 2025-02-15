@@ -1,0 +1,65 @@
+[
+    {
+        "problem_id": "1223482866310205440",
+        "question": "This problem requires reading in 2 positive integers A and B, and outputting their greatest common divisor and least common multiple.\n\n### Input Format:\n\nThe input provides 2 integers A and B with absolute values not exceeding 1000 on one line.\n\n### Output Format:\n\nOutput the greatest common divisor and least common multiple of A and B on one line.\n\n### Sample Input:\n\n```in\n16 24\n```\n\n### Sample Output:\n\n```out\n8 48\n```",
+        "desc": "This problem tests the understanding of mathematical operations such as finding the greatest common divisor (GCD) and least common multiple (LCM) of two integers, utilizing Python's built-in functions like `math.gcd` and basic arithmetic. It requires proficiency in input/output operations and handling standard integer arithmetic. The problem assesses a student's ability to apply mathematical concepts directly through Python's syntax and functions.",
+        "program": "m,n=map(int,input().split())\nruit = m*n\nif m>n:\n  m,n=n,m\nr = n%m\nwhile r>0:\n  if m>n:\n    m,n=n,m\n  n,m=m,r\n  r = n%m\nprint(m,ruit//m)\n",
+        "error_desc": "No error."
+    },
+    {
+        "problem_id": "1342036462610956288",
+        "question": "Output the 99 multiplication table.\n\n### Input Format:\n\nEnter the value of positive integer n on one line, 1<=n<=9.\n\n### Output Format:\n\nOutput the multiplication table of 1\\*n, with each multiplication expression starting with 1 space in front.\n\n### Sample Input 1:\n\n```in\n5\n\n```\n\n### Sample Output 1:\n\n```out\n 1*1=1\n 1*2=2 2*2=4\n 1*3=3 2*3=6 3*3=9\n 1*4=4 2*4=8 3*4=12 4*4=16\n 1*5=5 2*5=10 3*5=15 4*5=20 5*5=25\n \n```\n\n### Sample Input 2:\n\n```in\n9\n\n```\n\n### Sample Output 2:\n\n```out\n 1*1=1\n 1*2=2 2*2=4\n 1*3=3 2*3=6 3*3=9\n 1*4=4 2*4=8 3*4=12 4*4=16\n 1*5=5 2*5=10 3*5=15 4*5=20 5*5=25\n 1*6=6 2*6=12 3*6=18 4*6=24 5*6=30 6*6=36\n 1*7=7 2*7=14 3*7=21 4*7=28 5*7=35 6*7=42 7*7=49\n 1*8=8 2*8=16 3*8=24 4*8=32 5*8=40 6*8=48 7*8=56 8*8=64\n 1*9=9 2*9=18 3*9=27 4*9=36 5*9=45 6*9=54 7*9=63 8*9=72 9*9=81\n \n```",
+        "desc": "This problem tests the ability to use for loops for iteration and the print() function for formatting output. It requires understanding nested loops to iterate over numerical ranges and constructing formatted strings for display. The problem assesses basic syntax fluency, comprehension of loops, and string manipulation skills in Python.",
+        "program": "year=input()\nmonth=input()\nday=input()\nprint(\"{}-{}-{}\".format(year,month,day))",
+        "error_desc": "1. The student's code reads three inputs while the problem requires only one.\n2. An `EOFError` occurs because the code tries to read more input lines than are provided, leading to a non-zero exit code."
+    },
+    {
+        "problem_id": "932977006311677952",
+        "question": "Extract every number from the string, then count the total number of numbers and calculate their sum.\n\n### Input format:\n\nA single line of string, where numbers are separated by one or more spaces.\n\n### Output format:  \nLine 1: Output the count of numbers.  \nLine 2: The result of the sum, rounded to three decimal places.\n\n### Sample input:\n\n```in\n2.1234    2.1     3    4 5 6\n```\n\n### Sample output:\n```out\n6\n22.223\n```",
+        "desc": "This problem primarily tests the ability to utilize Python's `input()` function to read user inputs and parse strings. It also assesses the student's skills in string manipulation, specifically using methods to split the string by spaces and convert the extracted substrings into numerical values (integers or floats). Additionally, the problem evaluates the student's capability to perform arithmetic operations, such as counting and summing numbers, and formatting the output to a specified precision.",
+        "program": "s = input()\nl = s.split()\nchdu = len(l)\nsum = 0\nfor i in range(chdu):\n  sum = sum + float(l[i])\nprint(chdu)\nprint(\"{:.3f}\".format(sum))\n",
+        "error_desc": "No error."
+    },
+    {
+        "problem_id": "1312595428907802624",
+        "question": "Input string A (no duplicate characters), input string B, and determine the number of characters in string A that also appear in string B. Hint: use the `in` operator.\n\n### Input format:\n\nInput string A on one line.  \nInput string B on the next line.\n\n### Output format:\n\nOutput the number of characters on one line.\n\n### Sample input:\n\nHere is a set of input. For example:\n\n```in\nAEIOU\nHELLO World!\n```\n\n### Sample output:\n\nHere is the corresponding output. For example:\n\n```out\n2\n```",
+        "desc": "This problem tests the understanding of string manipulation and iteration in Python. It requires the ability to iterate through a string and use the `in` operator to check membership of characters in another string. The problem assesses basic skills in counting matching elements and familiarity with string handling.",
+        "program": "lonst = str(input())\nlostr = str(input())\nn = 0\nfor i in lonst:\n    if i in lostr:\n        n = n + 1\nprint(n)\n",
+        "error_desc": "No error."
+    },
+    {
+        "problem_id": "1346739497152282624",
+        "question": "Input a positive integer n (n>=2), and output the sum of all n-digit prime numbers. For example, if n=2, the output is the sum of all prime numbers between 10 and 99.\n\n### Input Format:\n\nA positive integer n (n>=2)\n\n### Output Format:\n\nOutput the sum of all n-digit prime numbers\n\n### Sample Input:\n\n```in\n2\n```\n\n### Sample Output:\n\n```out\n10-99之间所有的素数和=1043\n```",
+        "desc": "This problem tests understanding of the `break` statement used to control loops to efficiently determine prime numbers. Students need to implement algorithms to check for prime numbers using loops, applying `break` when a divisor is found. This also requires knowledge of loops, conditionals, and range handling to sum n-digit primes.",
+        "program": "n=int(input())\nb=bin(n)\no=oct(n)\nh=hex(n)\nprint(b[2:],o[2:],h[2:])",
+        "error_desc": "1. The student's code addresses an unrelated problem, converting the input integer to binary, octal, and hexadecimal formats instead of calculating the sum of n-digit prime numbers.\n2. The code lacks logic for iterating over n-digit numbers and determining prime numbers, which is required to solve the given problem.\n3. The output format does not match the problem's requirements, missing the specific format that includes the range and the sum, such as \"Sum of all prime numbers between 10 and 99 is 1043\"."
+    },
+    {
+        "problem_id": "1384139261733036032",
+        "question": "Caesar cipher is an encryption algorithm used by Julius Caesar of ancient Rome to encrypt military intelligence. It uses a substitution method to replace each English character in the information with the third character following it in the alphabetical sequence. The corresponding relationship is as follows:\n\n|Original| A | B | C | D | E | F | G | H | I | J | K | L | M | N | O | P | Q | R | S | T | U | V | W | X | Y | Z |\n|-----------|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|\n|Ciphertext| D | E | F | G | H | I | J | K | L | M | N | O | P | Q | R | S | T | U | V | W | X | Y | Z | A | B | C |\n\nThe Caesar cipher algorithm is implemented using the `maketrans()` and `translate()` methods, where k represents the algorithm key, which is the number of positions each letter is shifted by.\n\n### Input Format:\n\nInput a string on a single line.\n\n### Output Format:\n\nOutput the encrypted string on a single line.\n\n### Sample Input:\n\nHere is a set of input. For example:\n\n```in\nPython is a greate programming language. I like it!\n```\n\n### Sample Output:\n\nHere is the corresponding output. For example:\n\n```out\nSbwkrq lv d juhdwh surjudpplqj odqjxdjh. L olnh lw!\n```",
+        "desc": "This problem tests the understanding of string manipulation using Python, specifically the `str.maketrans()` and `str.translate()` methods. The task requires creating a simple Caesar cipher, which involves replacing each letter in a string according to a fixed shift in the alphabet. Students must demonstrate their ability to manipulate strings and implement basic encryption logic in Python.",
+        "program": "x = input()\nnum = int(input())\nx2 = str()\nfor i in x:\n   if i.isalpha():\n      temp = ord(i) + num\n      if chr(temp).isalpha():\n         x2 += chr(temp)\n      else:\n         x2 += chr(temp - 26)\n   else:\n      x2 += i\n\nprint(x2)\n",
+        "error_desc": "1. The program attempts to read two inputs, while the problem specifies only one line of input is needed.\n2. As a result, the program causes an `EOFError` when trying to read the second input, causing the program to exit unexpectedly with a non-zero exit code."
+    },
+    {
+        "problem_id": "1312335757286432768",
+        "question": "A palindrome is a string that is symmetric around its center, meaning the sequence of characters reads the same from left to right as it does from right to left.  \nEnter a string to determine whether it is a palindrome, considering only alphanumeric characters and ignoring case differences.\n\n### Input Format:\n\nEnter a string.\n\n### Output Format:\n\nIf it is a palindrome, output `yes` on one line; otherwise, output `no`.\n\n### Sample Input:\n\nHere is a sample input:\n\n```in\nA man,a plan; cnalPanama\n```\n\n### Sample Output:\n\nHere is the corresponding output:\n\n```out\nyes\n```",
+        "desc": "This problem assesses understanding of string manipulation, including the ability to sanitize input by removing non-alphanumeric characters and handling case insensitivity. Students must demonstrate logical thinking to compare a processed string against its reverse to check for palindrome properties. The task hones skills in using string methods and slicing alongside conditional statements to evaluate and output correct responses.",
+        "program": "data = list(input().replace(' ','').lower())\nresult,pdata = [],[]\nfor i in range(len(data)):\n    if (ord(data[i]) >= 48 and ord(data[i]) <= 57) or (ord(data[i]) >= 65 and ord(data[i]) <= 90) or (ord(data[i]) >= 97 and ord(data[i]) <= 122):\n        result.append(i)\n        \nfor i in result:\n    pdata.append(data[int(i)])\ndata1 = pdata[::-1]   \npdata = ''.join(pdata)\ndata1 = ''.join(data1)\n \nif pdata == data1:\n    print('yes')\nelse:\n    print('no')",
+        "error_desc": "No error."
+    },
+    {
+        "problem_id": "1368392480369938432",
+        "question": "Enter an arbitrary three-digit integer (which can be positive or negative), and use built-in numerical operators to output the units, tens, and hundreds digits of the number.\n\n### Input format:\n\nEnter an integer A.\n\n### Output format:\n\nOutput the units, tens, and hundreds digits separately.\n\n### Sample input:\n\nA set of inputs is provided here. For example:\n\n```in\n-123\n```\n\n### Sample output:\n\nThe corresponding output is given here. For example:\n\n```out\n3 2 1\n```",
+        "desc": "This question tests the understanding of Python's numerical types and basic arithmetic operators. Students must demonstrate proficiency in handling integer arithmetic and extracting specific digits by using modulo and integer division operations. The problem requires attention to details when handling both positive and negative integers, ensuring correct digit extraction.",
+        "program": "s = input(\"\")\nif s[:1]in ['-']:\n    s = s[1:]\n    print(s[-1:] +' '+s[-2:-1] +' '+s[0:1])\nelse:\n    print(s[-1:] +' '+s[-2:-1] +' '+s[0:1])",
+        "error_desc": "No error."
+    },
+    {
+        "problem_id": "1144103905861001216",
+        "question": "This problem requires you to calculate the value of y corresponding to the input floating point number x based on the definition of the following piecewise function. Output the result rounded to two decimal places. Note: Use the math library.\n\n### Input Format:\n\nEnter the value of x on a single line.\n\n### Output Format:\n\nOutput the calculation result rounded to two decimal places.\n\n### Sample Input 1:\n```in\n-1\n```\n\n### Sample Output 1:\n```out\n0.00\n```\n\n### Sample Input 2:\n```in\n3.5\n```\n\n### Sample Output:\n```out\n1.88\n```",
+        "desc": "This problem tests understanding of numerical types and the use of conditional statements to implement piecewise functions in Python. Students need to correctly apply multiple branches to compute values based on input conditions and use the math library for any necessary mathematical operations. The ability to format output to a specified precision reflects an understanding of output representation and rounding methods in Python.",
+        "program": "from math import *\nx=float(input())\nresult=0\nif x<=0:\n    result=0\nelif 0<x<=3.5:\n    result=tan(x)+log(x+1)\nelse:\n    result=cos(x)+exp(x)\nprint(\"{:.2f}\".format(result))\n",
+        "error_desc": "No error."
+    }
+]
