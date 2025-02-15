@@ -45,7 +45,7 @@
         "problem_id": "1063270394656088064",
         "question": "Input a numeric value representing the radius of a circle, and calculate the area of the corresponding circle. Use the pi constant from the math library for the value of π.\n\n### Input Format:\n\nEnter numerical data, for example: 1.5\n\n### Output Format:\n\nOutput the area of the circle, with two decimal places, for example: 7.07\n\n### Sample Input:\n\nHere is a set of input. For example:\n\n```in\n1.5\n```\n\n### Sample Output:\n\nHere is the corresponding output. For example:\n\n```out\n7.07\n```",
         "desc": "The problem assesses the fundamental understanding of Python's `print()` function, formatting outputs, and using external libraries such as `math` for mathematical constants. The task requires students to calculate a geometric property using basic arithmetic operations and format the result to a specified decimal precision. It evaluates students' abilities in handling numerical input/output and employing library functions to solve problems.",
-        "program": "r=int(input('输入半径值：'))\narea=3.1415*r*r\nprint(area)\n\nprint('{:.2f}'.format(area))```",
+        "program": "r=int(input('Input radius：'))\narea=3.1415*r*r\nprint(area)\n\nprint('{:.2f}'.format(area))```",
         "error_desc": "1. The student used `int()` to convert input, but the input can be a float.\n    2. Using `int()` on a float input like `'1.5'` causes a `ValueError`."
     },
     {
